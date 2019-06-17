@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Coin Flip and Dice Roll",
-	"version": "1.0",
+	"version": "2.0",
 	"description": "Flip a coin or roll a dice in your browser with only 2 clicks.",
 	"icons": {
 		"48": "icons/coin.png"

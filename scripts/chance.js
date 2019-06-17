@@ -1,5 +1,5 @@
 browser.contextMenus.create({
-	id: 'coin',
+	id: 'flip',
 	title: 'Flip a coin.'
 });
 
@@ -38,37 +38,37 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.onClicked.addListener(function(info) {
-	if (info.menuItemId == 'coin') {
+	if (info.menuItemId == 'flip') {
 		browser.tabs.executeScript({
-			file: 'scripts/flip.js'
+			code: "alert(Math.random()>=0.5 ? 'HEADS!' : 'TAILS!')"
 		});
 	} else if (info.menuItemId == 'roll4') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll4.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 4) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll6') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll6.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 6) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll8') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll8.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 8) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll10') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll10.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 10) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll12') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll12.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 12) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll20') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll20.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 20) + 1) + '!')"
 		});
 	} else if (info.menuItemId == 'roll100') {
 		browser.tabs.executeScript({
-			file: 'scripts/roll100.js'
+			code: "alert('You rolled ' + (Math.floor(Math.random() * 100) + 1) + '!')"
 		});
 	}
 });
